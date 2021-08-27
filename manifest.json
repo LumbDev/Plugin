@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "itProger AdBlocker",
+  "description": "Удаляем все YouTube видео со страницы!",
+  "version": "0.0.1",
+  "author": "Георгий Дударь",
+  "browser_action": {
+    "default_title": "Удаление YouTube видео",
+    "default_icon": "icon.png",
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["jquery.min.js", "content.js", "changeBg.js"]
+    }
+  ],
+  "permissions": ["activeTab"]
+}
